@@ -1,0 +1,38 @@
+.settings .settings__section-top {
+  border-top: 1px solid #f7f7f7;
+  padding-top: 20px;
+}
+
+.settings__list .version {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings__column .version-number {
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.settings .settings__section-middle {
+  border-top: 1px solid #f7f7f7;
+  padding-top: 20px;
+}
+
+.settings .settings__section-low {
+  border-top: 1px solid #f7f7f7;
+  padding-top: 20px;
+}
+
+.settings__setting .settings__icon {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.settings__setting .settings__title {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.settings .settings__setting {
+  margin-bottom: 25px;
+}
