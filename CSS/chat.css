@@ -1,0 +1,119 @@
+.chat-body {
+  padding: 0px;
+}
+
+.chat-body .status-bar,
+.chat-body .header {
+  padding: 0px 20px;
+}
+
+.chat-screen {
+  background-image: linear-gradient(to right, #dae2f8, #d6a4a4);
+  min-height: 100vh;
+}
+
+.chat__write {
+  position: fixed;
+  bottom: 50px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fcfcfc;
+  padding: 10px 20px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  border-radius: 30px;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.chat__write i {
+  font-size: 22px;
+}
+
+.chat__write-column:nth-child(2) {
+  width: 80%;
+}
+
+.chat__write-column input {
+  padding: 5px;
+  width: 100%;
+  border: none;
+}
+
+.chat__write-column input:focus {
+  outline: none;
+}
+
+.chat-screen .chat__messages {
+  border-top: 1px solid #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
+  padding-top: 30px;
+}
+
+.chat__messages .chat__timestamp {
+  background-color: rgb(255, 178, 36);
+  font-size: 14px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.message .message__content {
+  width: 80%;
+}
+
+.incoming-message img {
+  width: 45px;
+  height: 45px;
+  border-radius: 42%;
+  margin-right: 15px;
+}
+
+.incoming-message {
+  align-self: flex-start;
+}
+
+.sent-message {
+  display: flex;
+  align-self: flex-end;
+}
+
+.message .message__talk {
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  background-color: rgb(255, 199, 94);
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.incoming-message .message__author {
+  margin-bottom: 30px;
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.incoming-message .message__talk {
+  border-top-left-radius: 0px;
+}
+
+.sent-message .message__talk {
+  border-bottom-right-radius: 0px;
+}
