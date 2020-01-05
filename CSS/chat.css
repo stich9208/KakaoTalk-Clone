@@ -60,22 +60,18 @@
   background-color: rgb(255, 178, 36);
   font-size: 14px;
   padding: 5px 10px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   border-radius: 10px;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   text-transform: uppercase;
   font-weight: 600;
+  opacity: 0.7;
 }
 
 .message {
   display: flex;
-  align-items: flex-start;
-  width: 50%;
-  margin-bottom: 20px;
-}
-
-.message .message__content {
-  width: 80%;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .incoming-message img {
@@ -85,13 +81,18 @@
   margin-right: 15px;
 }
 
+.message__friend {
+  display: block;
+}
+
 .incoming-message {
   align-self: flex-start;
 }
 
 .sent-message {
   display: flex;
-  align-self: flex-end;
+  justify-content: flex-end;
+  padding-right: 0px;
 }
 
 .message .message__talk {
@@ -116,4 +117,18 @@
 
 .sent-message .message__talk {
   border-bottom-right-radius: 0px;
+}
+
+.message__talk {
+  display: block;
+}
+
+.message__content {
+  display: flex;
+  align-items: center;
+}
+
+.message__timestamp {
+  margin: 0px 5px;
+  margin-top: 20px;
 }
