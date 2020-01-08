@@ -1,3 +1,12 @@
+.header-wrapper {
+  position: fixed;
+  background-color: white;
+  top: 0px;
+  width: 100%;
+  padding-top: 10px;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
 .chat-body {
   padding: 0px;
 }
@@ -8,25 +17,66 @@
 }
 
 .chat-screen {
-  background-image: linear-gradient(to right, #dae2f8, #d6a4a4);
-  min-height: 100vh;
+  background-image: linear-gradient(#dae2f8, #d6a4a4);
+  min-height: 200vh;
+  padding-top: 100px;
 }
 
-.chat__write {
+.chat__write--container {
   position: fixed;
-  bottom: 50px;
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fcfcfc;
-  padding: 10px 20px;
+  width: 100%;
+  bottom: 0px;
   margin: 0 auto;
   left: 0;
   right: 0;
-  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #fcfcfc; */
+}
+
+.chat__write {
+  margin: 0 auto;
+  bottom: 0px;
+  width: 100%;
+  border-radius: 0;
+  padding: 20px 60px;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  transition: all 0.5s ease-in-out,
+    border-radius 0.5s ease-in-out /* transform 0.5s ease-in-out*/;
+}
+
+.chat__icon-left {
+  position: absolute;
+  left: 10px;
+}
+
+.chat__icon-right {
+  position: absolute;
+  right: 20px;
+}
+
+.chat__write-icon {
+  margin-left: 15px;
+}
+
+.chat__write:focus {
+  outline: none;
+  width: 80%; /*chat__write--container 에서 background-color속성을 갖고 있으면 적용이 되지 않는다.*/
+  transform: translateY(-70px);
+  border-radius: 45px;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.chat__icon {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.chat__write:focus ~ .chat__icon {
+  opacity: 0;
 }
 
 .chat__write i {
@@ -37,15 +87,11 @@
   width: 80%;
 }
 
-.chat__write-column input {
+/* .chat__write-column input {
   padding: 5px;
   width: 100%;
   border: none;
-}
-
-.chat__write-column input:focus {
-  outline: none;
-}
+} */
 
 .chat-screen .chat__messages {
   border-top: 1px solid #f7f7f7;
@@ -56,8 +102,8 @@
   padding-top: 30px;
 }
 
-.chat__messages .chat__timestamp {
-  background-color: rgb(255, 178, 36);
+.chat-screen .chat__timestamp {
+  background-color: rgb(255, 199, 94);
   font-size: 14px;
   padding: 5px 10px;
   margin-bottom: 50px;
@@ -65,7 +111,7 @@
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   text-transform: uppercase;
   font-weight: 600;
-  opacity: 0.7;
+  /* opacity: 0.7; opacity를 적용하면  header 위로 드러나 보인다. */
 }
 
 .message {
