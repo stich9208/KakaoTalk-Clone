@@ -1,4 +1,5 @@
 .header-wrapper {
+  z-index: 2;
   position: fixed;
   background-color: white;
   top: 0px;
@@ -44,8 +45,8 @@
   width: 100%;
   border: none;
   font-size: 16px;
-  transition: all 0.5s ease-in-out,
-    border-radius 0.5s ease-in-out /* transform 0.5s ease-in-out*/;
+  transition: all 0.7s ease-in-out,
+    border-radius 0.7s ease-in-out /* transform 0.5s ease-in-out*/;
 }
 
 .chat__icon-left {
@@ -62,6 +63,24 @@
   margin-left: 15px;
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(-70px);
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
+  50% {
+    transform: translateY(-75px);
+    box-shadow: 0 13px 27px 20px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
+  100% {
+    transform: translateY(-70px);
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
+}
+
 .chat__write:focus {
   outline: none;
   width: 80%; /*chat__write--container 에서 background-color속성을 갖고 있으면 적용이 되지 않는다.*/
@@ -69,6 +88,7 @@
   border-radius: 45px;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  animation: float 2s ease-in-out infinite backwards;
 }
 
 .chat__icon {
@@ -120,11 +140,21 @@
   margin-bottom: 30px;
 }
 
+@keyframes spin {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateY(1turn);
+  }
+}
+
 .incoming-message img {
   width: 45px;
   height: 45px;
   border-radius: 42%;
   margin-right: 15px;
+  animation: spin 1.5s linear infinite;
 }
 
 .message__friend {
@@ -177,4 +207,34 @@
 .message__timestamp {
   margin: 0px 5px;
   margin-top: 20px;
+}
+
+@keyframes incomingAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.incoming-message {
+  animation: incomingAnimation 0.5s ease-out forwards;
+}
+
+@keyframes sentAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.sent-message {
+  animation: sentAnimation 0.5s ease-out forwards;
 }
