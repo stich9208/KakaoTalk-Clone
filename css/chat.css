@@ -18,7 +18,7 @@
 }
 
 .chat-screen {
-  background-image: linear-gradient(#dae2f8, #d6a4a4);
+  background-image: url("../image/chatBg.png");
   min-height: 200vh;
   padding-top: 100px;
 }
@@ -33,7 +33,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #fcfcfc; */
 }
 
 .chat__write {
@@ -116,7 +115,7 @@
 }
 
 .chat-screen .chat__timestamp {
-  background-color: rgb(255, 199, 94);
+  background-color: #ffc1c1;
   font-size: 14px;
   padding: 5px 10px;
   margin-bottom: 50px;
@@ -172,7 +171,6 @@
 
 .message .message__talk {
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
-  background-color: rgb(255, 199, 94);
   border-radius: 20px;
   padding: 10px 20px;
   font-size: 20px;
@@ -190,10 +188,12 @@
 
 .incoming-message .message__talk {
   border-top-left-radius: 0px;
+  background-image: linear-gradient(to right, #c3f8c6, #ffc1c1);
 }
 
 .sent-message .message__talk {
   border-bottom-right-radius: 0px;
+  background-image: linear-gradient(to left, #c3f8c6, #ffc1c1);
 }
 
 .message__talk {

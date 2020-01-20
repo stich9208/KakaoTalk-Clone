@@ -34,6 +34,52 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  /* transition: 2s transform 0.2s ease-in-out; */
+}
+
+.nav__bubble:link .nav__badge {
+  animation: badge 0.7s ease-in-out;
+  animation-delay: 0.4s;
+}
+
+@keyframes badge {
+  0% {
+    transform: none;
+    background-color: #dc5d46;
+  }
+  10% {
+    background-color: rgba(0, 0, 255, 0.877);
+  }
+  20% {
+    background-color: rgba(255, 255, 0, 0.712);
+  }
+  30% {
+    background-color: rgba(0, 128, 0, 0.548);
+  }
+  40% {
+    background-color: slateblue;
+  }
+
+  50% {
+    transform: rotateX(1turn) rotateY(1turn) scale(3);
+    background-color: #faa5964b;
+  }
+  60% {
+    background-color: slateblue;
+  }
+  70% {
+    background-color: rgba(0, 128, 0, 0.548);
+  }
+  80% {
+    background-color: rgba(255, 255, 0, 0.712);
+  }
+  90% {
+    background-color: rgba(0, 0, 255, 0.877);
+  }
+  100% {
+    transform: none;
+    background-color: #dc5d46;
+  }
 }
 
 @keyframes showNavbar {
